@@ -1,7 +1,3 @@
-a {
-	color: #212529;
-}
-
 h1, h2, h3, h4 {
 	margin: 40px 0px 20px 0px;
 }
@@ -18,6 +14,7 @@ h1, h2, h3, h4 {
 
 #content-wrapper {
 	padding: 40px 20% 40px 20%;
+	margin-bottom: 40px;
 }
 
 #bio {
@@ -76,6 +73,12 @@ h1, h2, h3, h4 {
 	width: 100%;
 }
 
+#inkhunter-left {
+	width: 28%;
+}
+#inkhunter-right {
+	width: 68%;
+}
 
 @media (max-width: 1024px) {
 	.left-col {
@@ -84,5 +87,49 @@ h1, h2, h3, h4 {
 	.right-col {
 		width: 100%;
 	}
+	.two-col {
+		justify-content: center;
+	}
+	#inkhunter-left {
+		width: 40%;
+	}
+	#inkhunter-right {
+		padding-top: 10px;
+		width: 100%;
+	}
+}
+
+
+/***inkhunter****/
+.subtitle {
+	text-align: center
+}
+
+#inkhunter-sketches {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.inkhunter-sketch {
+	width: 100px;
+}
+.modal-img {
+	width: 100%;
+}
+.sketch-title {
+	font-style: italic;
+}
+.sketch-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 150px;
+	height: 230px;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0 0 9px 0 #0000007a;
+	text-align: center;
+	margin: 15px;
 }
 

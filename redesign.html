@@ -48,26 +48,24 @@ Now that I have a better idea of what I’m doing, I thought it would be a fun e
 		<h3>Usability</h3>
 		<p>
 		I applied the concepts we learned in class to identify usability issues with the website. The six usability criteria I looked are were: <strong>intuitive design, ease of learning, efficiency of use, memorability, error frequency and severity, and subjective satisfaction.</strong>
-		</br></br>
+		</br>
+		<ol>
+			<li>Analyzing the site for <strong>intuitive design</strong>, I found that the menu bar on the original site is clear, for the most part, but the “trail” metaphor is confusing. That aside, from the menu bar it is clear to see that the site revolves around user creation and sharing, and if users are curious about the details, they can read the “About” page.
+				The worst offense is probably the user profile page: the layout does not make sense. It is hard to tell which cells in the table are the content, which are the headers, and which headers match with which content.</li>
+			</br>
+			<li>The overall <strong>ease of learning</strong> for the story event page is good. The available actions and action button are clearly labelled, as well as the inventory. Basic navigation from page to page is manageable. However, figuring out where you have been is difficult, if not impossible.</li>
+			</br>
+			<li> As for <strong>efficiency of use</strong>, the search tools are simple, which makes them easy to use. However, it makes finding specifically what you want an annoyingly long process. If you don’t remember the specific tag you want exactly, you have to scroll through all of the stories until you find it. Also, you can only filter by tags, rather than by author or story content. You also can’t combine search conditions, which means a lot of unnecessary scrolling for users.</li>
+			</br>
+			<li>In terms of <strong>memorability</strong>, the memorability of the site is good, due to its simplicity. Aside from the trail metaphor, most things are labelled well and follow website standards, such as the login/logout system and button structure.
+</li></br>
 
-		Analyzing the site for <strong>intuitive design</strong>, I found that the menu bar on the original site is clear, for the most part, but the “trail” metaphor is confusing. That aside, from the menu bar it is clear to see that the site revolves around user creation and sharing, and if users are curious about the details, they can read the “About” page.
-The worst offense is probably the user profile page: the layout does not make sense. It is hard to tell which cells in the table are the content, which are the headers, and which headers match with which content.
-</br></br>
+<li><strong>	Error frequency and severity </strong>is mild. One of the biggest errors users may make is accidentally selecting the wrong action when navigating a story. However, in the site there is a “back” button, so it is easily fixed. Another error occurs if a user mistypes a tag name when they’re searching, which can be frustrating, but is not severe.
+</li></br>
 
-The overall <strong>ease of learning</strong> for the story event page is good. The available actions and action button are clearly labelled, as well as the inventory. Basic navigation from page to page is manageable. However, figuring out where you have been is difficult, if not impossible.
-		</br></br>
-
-		As for <strong>efficiency of use</strong>, the search tools are simple, which makes them easy to use. However, it makes finding specifically what you want an annoyingly long process. If you don’t remember the specific tag you want exactly, you have to scroll through all of the stories until you find it. Also, you can only filter by tags, rather than by author or story content. You also can’t combine search conditions, which means a lot of unnecessary scrolling for users.
-</br></br>
-
-In terms of <strong>memorability</strong>, the memorability of the site is good, due to its simplicity. Aside from the trail metaphor, most things are labelled well and follow website standards, such as the login/logout system and button structure.
-</br></br>
-
-<strong>	Error frequency and severity </strong>is mild. One of the biggest errors users may make is accidentally selecting the wrong action when navigating a story. However, in the site there is a “back” button, so it is easily fixed. Another error occurs if a user mistypes a tag name when they’re searching, which can be frustrating, but is not severe.
-</br></br>
-
-Last, for <strong>subjective satisfaction</strong>, the system looks bare-bones and unforgiving, which can be grating for users. Some layout decisions are misleading, such as the user profile page table, but overall users are able to figure out what is going on. They may feel like they are “putting up” with bad visual design, though, when they use the site.
-	</p>
+<li>Last, for <strong>subjective satisfaction</strong>, the system looks bare-bones and unforgiving, which can be grating for users. Some layout decisions are misleading, such as the user profile page table, but overall users are able to figure out what is going on. They may feel like they are “putting up” with bad visual design, though, when they use the site.</li>
+	</ol>
+		</p>
 
 		<h4>Visual Design</h4>
 		<p>
@@ -77,22 +75,25 @@ Last, for <strong>subjective satisfaction</strong>, the system looks bare-bones 
 
 		<h2>Usability Redesign</h2>
 		<p>
-		To start, I created wireframes for five of the main pages for An Ordinary Day that address the usability issues mentioned above. I drew arrows connecting all the pages together, except for all of the story cards–it would get too confusing. For each story card, clicking on the image or title leads to the story, but clicking on the username leads to the author’s profile.
+		To start, I created wireframes for five of the main pages for An Ordinary Day. I drew arrows connecting all the pages together, except for all of the story cards–it would get too confusing. For each story card, clicking on the image or title leads to the story, but clicking on the username leads to the author’s profile.
 		</p>
 		<div class="img-wrapper"><img class="content-img" src="./images/connected-wireframes.png" alt="wireframes for the redesign of An Ordinary Day"/></div>
 		<p>
-		In terms of <strong>intuitive design</strong>, in the redesigned interface, the “New Trail” button is replaced by “Create,” which is simpler and easier to understand. In fact, the whole “trail” metaphor is scrapped. Also, by featuring and labelling “stories” on the homepage, users know instantly that this is a literary website.
+		This redesign addresses the issues found with the six usability criteria mentioned above.
+		<ol>
+			<li>In terms of <strong>intuitive design</strong>, in the redesigned interface, the “New Trail” button is replaced by “Create,” which is simpler and easier to understand. In fact, the whole “trail” metaphor is scrapped. Also, by featuring and labelling “stories” on the homepage, users know instantly that this is a literary website.
 For the user profile page, I got rid of the table entirely. I replaced it with an instagram-style bio, and clearly labelled lists related to the user. The lists of stores created to, contributed to, and saved are listed individually, and are styled the same way so it is clear that they are all lists of stories.
-</br></br>
-		To improve <strong>ease of learning</strong>, I made it easier to retrace your steps through the text adventure story by including a sidebar with a list of previous locations and actions taken at those locations. Users can click on a history item to be taken to that place in the story, which makes nonlinear navigation easier (or rather, possible).
-</br></br>
-		With the new interface, <strong>efficiency of use</strong> is also enhanced. The search conditions can be more fine-tuned. A generic search bar allows users’ search queries to cover author and content, as well as tags. Common tag filters have been moved to a checkbox system below, which allows users to select specific tags quickly, as well as prevents typos. Users can select as many tags as they want at the same time, and tag selection can be used in combination with conditions from the search bar. Therefore, users can find what they want quickly and easily.
-</br></br>
-		There was not much changed in terms of <strong>memorability</strong>: I tried to keep things as simple as possible in my redesign, so the memorability should still be good.
-</br></br>
-		For <strong>error frequency and severity</strong>, on the explore page, users select common tags with the checkbox system instead of typing them out, which prevents typos. As such, error frequency and severity is decreased.
-		</br></br>
-		Last, <strong>subjective satisfaction</strong> is greatly improved in the redesigned interface. The site is better structured. I present information more clearly, and I address some annoying UI components of the original site. As such, users will find it more enjoyable to interact with.
+</li></br>
+<li>To improve <strong>ease of learning</strong>, I made it easier to retrace your steps through the text adventure story by including a sidebar with a list of previous locations and actions taken at those locations. Users can click on a history item to be taken to that place in the story, which makes nonlinear navigation easier (or rather, possible).
+</li></br>
+<li>With the new interface, <strong>efficiency of use</strong> is also enhanced. The search conditions can be more fine-tuned. A generic search bar allows users’ search queries to cover author and content, as well as tags. Common tag filters have been moved to a checkbox system below, which allows users to select specific tags quickly, as well as prevents typos. Users can select as many tags as they want at the same time, and tag selection can be used in combination with conditions from the search bar. Therefore, users can find what they want quickly and easily.
+</li></br>
+<li>	There was not much changed in terms of <strong>memorability</strong>: I tried to keep things as simple as possible in my redesign, so the memorability should still be good.
+</li></br>
+<li>For <strong>error frequency and severity</strong>, on the explore page, users select common tags with the checkbox system instead of typing them out, which prevents typos. As such, error frequency and severity is decreased.
+		</li></br>
+		<li>	Last, <strong>subjective satisfaction</strong> is greatly improved in the redesigned interface. The site is better structured. I present information more clearly, and I address some annoying UI components of the original site. As such, users will find it more enjoyable to interact with.</li>
+		</ol>
 		</p>
 
 		<h2>Visual Redesign</h2>
@@ -109,6 +110,9 @@ For the user profile page, I got rid of the table entirely. I replaced it with a
 		<p>Once I had the visual design for the desktop version of An Ordinary Day’s homepage, I kept working to make it responsive. As the wide version shrinks, I decided that the space between elements would stay the same, and the elements themselves would shrink. My reasoning was that as the page shrinks, I wanted some part of the page to remain static to give the users a sense of orientation. I chose the spacing to remain static over the elements because resizing spacing does not allow the page to shrink that much: it doesn’t take long before the elements are touching. The elements themselves, though, contain a lot of white space, and as such are able to shrink more than the spacing. When the window is small enough that the elements look squished together, I decided to reorder some of the elements so that they would stack vertically, instead of horizontally. This way, the order of importance of information on the page stays the same, but the elements have enough room to be represented on the page. Finally, when the page shrinks so that even that width is too small for the elements to be displayed, the layout switches to a one-column view. The order stays the same as if you look at the elements left-to-right on the website, so importance and orientation are still maintained.
 		</p>
 		<div class="img-wrapper"><img class="content-img" src="./images/responsiveRedesign.png" alt="Annotated version of the above mockup to show responsiveness"/></div>
+
+		<h2>Conclusion</h2>
+		<h1><strong>TO DO!!!</strong></h1>
 
 
 	</div> <!--content div-->
