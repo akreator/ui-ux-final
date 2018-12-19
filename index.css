@@ -29,12 +29,20 @@ h1, h2, h3, h4 {
 
 .portfolio-piece-img {
 	width: 100%;
+	padding-bottom: 5px;
 }
 
 .portfolio-piece {
 	margin-bottom: 5%;
 	min-width: 47%;
 	max-width: 47%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0 0 9px 0 #0000007a;
+	text-align: center;
 }
 
 .portfolio-piece-tags {
