@@ -31,106 +31,30 @@
 	</nav>
 
 	<div id="content-wrapper">
-		<h1 class="portfolio-title">A/B Testing and User Testing with Memphis Taxi Co.</h1>
-		<h2>Introduction</h2>
-		<p>
-		For this assignment, I used A/B testing and user testing to compare two different versions of a website for an imaginary company called "Memphis Taxi Co." The goal of the assignment was to practice A/B testing and user testing, and learn the best use cases for each. It's worth noting that the basic website, itself, is a template that was given to us by the TAs, and is not something that I designed. 
-		</p>
-		<h2>Preliminary Work</h2>
-		<p>
-There are two different versions of the Memphis Taxi website, called Version A and Version B. They are hosted on a heroku site (linked <a href="https://mysterious-fortress-53278.herokuapp.com/">here</a>) that randomly selects one of the versions to show. 
+		<h1 class="portfolio-title">User Testing with Memphis Taxi Co.</h1>
+		
 
-The original template of the site is Version B. I modified it to create Version A by changing the color of the buttons to red, and removing two taxi services so there are fewer links and less content.
-		</p>
-
-		<h2>Research</h2>
 		<p>
-		I used this heroku site in an in-class study, in which my classmates accessed the site and I recorded their interactions. The results of this study are as follows:
-
-		<h4>Click Rate</h4>
-		<p><strong>Null Hypothesis: </strong>
-	The click rate between Version A and Version B will be the same.	
+		As a software developer, one of the biggest issues I've come across is building a beautiful piece of software, sharing it with the world, and then watching it gather dust because no one can figure out how it works. What is intuitive to me, as a developer, can be confusing for my software's intended audience.
 		</p>
-		<p><strong>Alternative Hypothesis: </strong>
-		The click rate on Version A will be higher because I changed version A to use the color red for buttons, which makes them stand out more to the human eye.
+		<p>Turns out, there's an easy UI/UX solution to this problem: <strong>user testing</strong>. User testing allows designers and developers to test specific hypotheses about how users will interact with their software, as well as bring to light inaccurate mental models or other sources of confusion for users, before anything is even built. Designers create a prototype of the product, and then set tasks for users to complete using the interface, as well as qualitative questions about the interface and the task. This allows designers and developers to gain valuable insight into how users approach their product, and what they can do to make it better.  
 		</p>
 		<p>
-		I calculated the click rate with the formula <em>n/s</em>, where <em>n</em> is the number of unique clicks, and <em>s</em> is the number of unique sessions.
-As such, the click rate for Version A is 11/18 = 61%. The click rate for Version B is 5/20 = 0.25%.
-		</p>
-		<p><strong>Analysis:</strong></br>
-	To analyze the click rate, I used a chi-square test because the question behind my hypothesis is, “does the color red increase the click rate compared to the color blue?” and as such, I’m comparing two discrete categories of data: click rate on a site with red buttons, and the click rate on a site with blue buttons.</p>
-		<div class="img-wrapper"><img class="content-img" src="./images/clickrate.png" alt="calculations for the click rate"/></div></br>
-		<p>Since my p-value is < 0.05, my results are statistically significant. I reject the null hypothesis.</p>
 
-
-		<h4>Time to Click</h4>
-		<p><strong>Null Hypothesis: </strong>
-	The time to click rate between Version A and Version B will be the same.	
-		</p>
-		<p><strong>Alternative Hypothesis: </strong>
-		The time to click on Version A will be less than the time to click on Version B because I changed my Version A to have fewer links, which means that the user has to look through less content before clicking.
-		</p>
-		<p>To calculate a users’ time to click, I first calculated the time to click for each user that clicked on the page with the formula <em>timeToClick = clickTime - pageLoadTime</em>. Then, I averaged all of the timeToClick values. 
-Accordingly, the average time to click for Version A is 13574.5 milliseconds, and the average time to click for Version B is 3940.6 milliseconds. 
-		</p>
-		<p><strong>Analysis:</strong></br>
-	To analyze the time to click, I used a t-test because time is a type of continuous data, and thus “time to click” is a type of continuous data. 	
-		</p>
-		<div class="img-wrapper"><img class="content-img" src="./images/clicktime.png" alt="calculations for time to click"/></div></br>
-		<p>Since <em>t</em>=0.9707 and <em>df</em>=14, my p-value is > 0.05. Therefore, my results aren’t statistically significant and I cannot reject the null hypothesis.</p>
-		<p><strong>95% Confidence Interval</strong></br></p>
-		<div class="img-wrapper"><img class="content-img" src="./images/clicktimeConfidence.png" alt="calculations for time to click"/></div></br>
-		<p>My confidence interval is [-8881.69, 28149.49]. Therefore, the difference is not statistically different.</p>
-
-
-
-		<h4>Dwell Time</h4>
-		<p><strong>Null Hypothesis: </strong>
-		The dwell time between Version A and Version B will be the same.
-		</p>
-		<p><strong>Alternative Hypothesis: </strong>
-		The dwell time on Version A will be less than the dwell time on Version B because I changed Version A to have less content than Version B, which means that users will spend less time looking at it.
-		</p>
-		<p>
-		To calculate a users’ dwell time, I used the formula <em>secondPageLoadTime -clickTime</em>. I then averaged the dwell time for all users that used the same version.
-As such, the dwell time for Version A is 43654.6 milliseconds. The dwell time for Version B is 3631.7 milliseconds.
-
-<p><strong>Analysis:</strong></br>
-		To analyze the dwell time, I used a t-test because again, “time” is a type of continuous data.
-		</p>
-		<div class="img-wrapper"><img class="content-img" src="./images/dwelltime.png" alt="calculations for dwell time"/></div></br>
-		<p>Since <em>t</em>=1.0 and <em>df</em>=12, my p-value is > 0.05 and therefore my results are not statistically significant. I cannot reject the null hypothesis.</p>	
-
-
-		<h4>Return Rate</h4>
-		<p><strong>Null Hypothesis: </strong>
-	The return rate between Version A and Version B will be the same.	
-		</p>
-		<p><strong>Alternative Hypothesis: </strong>
-		The return rate on Version B will be higher because it has more content than Version A, which means that users have more content to pick from.
-		</p>
-		<p>
-		I used the formula <em>numReturns/numClicks</em> to calculate the number of user returns. 
-The return rate for Version A is 7/14 = 50%. The return rate for Version B is 7/9 = 78%.
-		</p>
-		<p><strong>Analysis:</strong> </br>
-	To analyze the return rate, I used a chi-square test because users either returned to the site or did not. Thus, I’m comparing discrete data with discrete categories.	
-		</p>
-		<div class="img-wrapper"><img class="content-img" src="./images/returnrate.png" alt="calculations for return rate"/></div></br>
-		<p>Since <em>x2</em>=1.7and <em>df</em>=1, my p-value is < 0.05 and therefore my results aren’t statistically significant. Therefore, I cannot reject the null hypothesis.</p>
-
-
-		<h2>User Testing</h2>
-		<p>I made a prototype of the mobile version of the website (found <a href="https://invis.io/5SOUCZK8BCJ">here</a>) and submitted it to UserTesting.com for the user testing portion of the assignment. I asked users to reserve the cheapest taxi to pick them up from the airport. I had two hypotheses about the results of user testing:
+		<h2>User Testing in Action</h2>
+		<p>I applied user testing to a mobile website for an imaginary company called Memphis Taxi Co. to determine how to best improve the site, and learn about common user errors.</p></br>
+		
+		<div class="img-wrapper"><img src="./images/memphis.png" class="content-img"></div></br>
+		<p>I made a mobile <a href="https://projects.invisionapp.com/share/5SOUCZK8BCJ#/screens">prototype</a> of the the Memphis Taxi template, given to us by the TAs of my UI/UX class, and submitted it to <a href="https://www.usertesting.com/">UserTesting.com</a>. I gave my three users the task of reserving the cheapest taxi to pick them up from the airport. </br></br>I had two hypotheses about the results of user testing:
 		<ol>
-			<li><strong>Comparing taxi services using Version B is difficult.</strong> </br>
-				To test this hypothesis, I asked users to reserve the cheapest taxi on the app to pick them up from the Memphis International Airport. I asked them also to rate the task on its difficulty as well as respond with whether or not they completed the task successfully. </li>
-			<li><strong>The task would be made easier if there were price listings on the homepage.</strong></br>
-				To test this hypothesis, I asked users to verbally answer the question, “What, if anything, is **missing** on the homepage?” after they completed the above task. In the post-test questionnaire, I asked, “What frustrated you most about this site?”; “If you had a magic wand, how would you improve this site?”; “Was there something missing you were expecting to see?”; and “What other feedback do you have for the owner of this site?”			</li>
+			<li>Comparing taxi services using the site is difficult.</li>
+			<li>The task would be made easier if there were price listings on the homepage.</li></br>
 		</ol>
 		</p>
-
+		<div class="img-wrapper">
+			<img src="./images/memphisprototype.png" class="content-img">
+			<p class="img-subtitle">Selected screens from the prototype</p>
+		</div></br>
 		<h4>Results</h4>
 		<table class="table">
 			<thead>
@@ -151,25 +75,22 @@ The return rate for Version A is 7/14 = 50%. The return rate for Version B is 7/
 			</tbody>
 		</table>
 
-		<p>The errors the users made were that they didn’t see the fourth taxi company because they didn’t scroll down, and that they assumed the homepage buttons reserved the taxi, at first. Two users figured out that they needed to click a button on a taxi-specific page to reserve a taxi, but one user did not, hence the 66% completion rate. Users seemed annoyed that they had to figure this out. The time to complete the task is high because every user, after seeing the price for one taxi company, went back to the homepage to then check the prices of every other taxi company. Overall, users were confused when they initially saw the site, but once they clicked to one of taxi-specific pages, they became more confident navigating the app. The users that completed the task seemed satisfied at the end, but the user that didn’t complete the task was not satisfied. She was frustrated, if anything.
+		<h6>Errors</h6>
+		<p>The major errors that occurred were:</p>
+		<ul>
+			<li>Users didn’t see the fourth taxi company because they didn’t know they could scroll down.</li>
+			<li>Users assumed the homepage buttons reserved the taxi, at first. </li>
+		</ul>
+		<p>Two users figured out that they needed to click a button on a taxi-specific page to reserve a taxi, but one user did not, hence the 66% completion rate. Users seemed annoyed that they had to figure this out. The time to complete the task is high because every user, after seeing the price for one taxi company, went back to the homepage to then check the prices of every other taxi company. Overall, users were confused when they initially saw the site, but once they clicked to one of taxi-specific pages, they became more confident navigating the app. The users that completed the task seemed satisfied at the end, but the user that didn’t complete the task was not satisfied. She was frustrated, if anything.
 		</p>
+		<h4>User Testing Conclusion</h4>
 		<p>In terms of the hypotheses, my first hypothesis was disproved, while my second was supported by user testing. All users ranked the task as “easy” after completing it, which contradicts my first hypothesis. However, two of the users mentioned that they were frustrated by the lack of pricing information on the homepage, and the third said that they would add pricing information to the homepage as a way to improve the site. Therefore, their responses supported my second hypothesis.
 		</p>
 		<p>To improve the interface, I would encourage users to scroll by modifying the layout so that part of the first item on the hidden, scrollable part of the page is showing when the user firsts load the page. I would also change the text on the homepage buttons to say “See Pricing and Reservation Info for ____,” instead of saying “Reserve.” As such, users would know that clicking the buttons on the first page does not make reservations with the taxi companies. Finally, I would list price ratings ($, $$, $$$, and $$$$) on the homepage so that users do not have to check every taxi company’s information to compare their prices. 
 		</p>
 
-
-		<h2>Advice to Memphis Taxi Co.</h2>
-		<p>I would advise the Memphis Taxi Co. to conduct more A/B tests because for the metrics, only one out of four metrics proved statistically significant in terms of the hypotheses. That being said, I would recommend that they use red buttons in whatever version they use, because the metrics suggest that red buttons provide a higher click rate. I would advise them to start with Version B with red buttons, and create a Version C with a different layout from Version B, as major layout changes were not testing in this set of experiments. I would also encourage them to change the text on the buttons to make it clear that clicking on the buttons on the home page does not reserve the taxis, but rather redirects users to reservation and pricing information, as this confused users in the user tests. I would also recommend putting price ratings, or general user ratings, on the home page so users could easily compare taxi companies. </p>
-
-
-
 		<h2>Conclusion</h2>
-		<p>My user testing experience was more informative than I expected. I didn’t think about the text on the homepage buttons at all when I was designing the prototype, but it caused the users a lot of trouble. I also forgot to ensure that some of the scrollable content was showing, and I didn’t realize how important having it was. Many users saw the scrollbar appear when they were using the homepage, but still didn’t scroll. In that way, the experience was successful. However, if I did it again, I would want to use an interface that I was more invested in–I think the interface we made in Redesign would have been more interesting to test, and I would have learned more from it because I would see how design choices I had given a lot of thought to affected users. </p>
-		<p>Overall I found user testing more helpful than A/B testing; user testing yielded more implementable information than A/B testing did. Three of the four A/B testing metrics did not yield statistically significant data, so although I was able to determine that some changes did not make a difference, it wasn’t data that I could directly act upon. User testing, though, brought some significant issues to light that I was not previously aware of. These issues were things I could directly address. As such, I prefer user testing over A/B testing.</p>
-		<p>A/B testing is better than user testing when designers want to test specific design choices. It’s well suited to answer the question, “Is design A or design B better in terms of X metric?” User testing is better for general feedback on how users approach the app, and answering general questions about functionality and usability as well as bringing up issues that the designer might overlook. 
-		</p>
-
+		<p>My user testing experience was more informative than I expected. I didn’t think about the text on the homepage buttons at all when I was designing the prototype, but it caused the users a lot of trouble. I also forgot to ensure that some of the scrollable content was showing, and I didn’t realize how important having it was. Many users saw the scrollbar appear when they were using the homepage, but still didn’t scroll. In general, I found the results of user testing to yield useful, implementable information that directly impacts the design of the app; it brought attention to significant issues that I was not previously aware of. I would highly recommend user testing to anyone creating a product of any sort.</p>
 
 	</div> <!--content div-->
 
